@@ -1,0 +1,840 @@
+@font-face {
+    font-family: 'Merriweather Sans';
+    src: url('inc/Fonts/MerriweatherSans/merriweathersans-reg.eot');
+    src: url('inc/Fonts/MerriweatherSans/merriweathersans-reg.eot?#iefix') format('embedded-opentype'),
+    /*url('/Fonts/MerriweatherSans/merriweathersans-reg.svg#merriweather_sansregular') format('svg'),*/
+    /*url('/Fonts/MerriweatherSans/merriweathersans-reg.woff') format('woff'),*/
+    url('inc/Fonts/MerriweatherSans/merriweathersans-reg.ttf') format('truetype'); 
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'Merriweather Sans Light';
+    src: url('inc/Fonts/MerriweatherSans/MerriweatherSans-Light.eot');
+    src: url('inc/Fonts/MerriweatherSans/MerriweatherSans-Light.eot?#iefix') format('embedded-opentype'),
+    /*url('/Fonts/MerriweatherSans/merriweathersans-reg.svg#merriweather_sansregular') format('svg'),*/
+    /*url('/Fonts/MerriweatherSans/merriweathersans-reg.woff') format('woff'),*/
+    url('inc/Fonts/MerriweatherSans/MerriweatherSans-Light.ttf') format('truetype');
+    font-style: normal;
+    }
+    
+/* LAYOUT */
+
+h1 {margin:5px 0 25px 0;}
+h2 {margin-top:0}
+h1, h2, h3, h4, h5, h6 {line-height:1.3}
+h4 {margin-top:20px;}
+.invisible {display:none;}
+
+#default2 header {padding:1.5em 1em 1.5em 1em;height:100px;}
+
+#custom header {float:left;}
+#custom.advanced header .container {background-repeat:no-repeat; background-position:left bottom; height:90px;}
+#custom.basic header .container {background-position:top right; background-repeat:no-repeat; height:100%;}
+#custom.advanced header #corporateBranding, #custom #mainLogo2, #printOnly {display:none;}
+#logos {z-index:500}
+#mainLogo, #programLogo {float:left;margin-top:-17px;}
+#programLogo img {padding-right:20px;margin-right:25px;}
+#programLogo img[src="/images/spacer.gif"] {display:none;}
+#programName, #siteName {padding-top:18px;text-align:right;}
+#corporateBranding {padding-left:0;}
+
+#mainNavi.navbar {
+    min-height:45px; border-radius:0px;box-shadow: 0px 5px 5px #ccc;
+    background: #c9cdcf; /* Old browsers */
+    background: -moz-linear-gradient(top, #c9cdcf 0%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9cdcf), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #c9cdcf 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #c9cdcf 0%,#ffffff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #c9cdcf 0%,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #c9cdcf 0%,#ffffff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9cdcf', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+}
+#mainNavi li a {padding-top: 5px;padding-bottom: 2px;line-height: 35px;}
+#mainNavi li a .caret {margin-left:7px;}
+#mainNavi .dropdown-menu li a, .bhSites .dropdown-menu a {padding-top:10px;padding-bottom:10px;line-height:1.5;}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {background-image:none;filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);}
+#registerButton {margin-top:7px;}
+#registerButton .btn {padding:4px 10px}
+#login{padding:5px;margin-top:-15px;border-bottom:2px solid #c0c0c0;margin-top: -15px;padding-top: 15px;padding-bottom: 15px;}
+.homePageOr{margin-top:0;display: block; text-align:center;}
+.register h3 {text-align:right;}
+
+#secNav img {clear:both; display:none;}
+#secNav {padding-bottom:125px;background-position:bottom;background-repeat:no-repeat;margin-bottom:8em;}
+#secNav ul {margin-bottom:30px;}
+#secNav ul li ul {margin-bottom:0px; padding:0 0 7px 0;}
+#secNav ul ul li {list-style-type:disc; padding:2px 5px 2px 0; margin-left:3em}
+#secNav ul ul li a {border-top:0px;}
+
+#utilArea {float:left;z-index: 100;height:35px;padding:6px;}
+#utilArea nav, #utilArea .breadcrumb {margin:0;padding:0;text-align:right;}
+
+#buttonLine {background-repeat:no-repeat; height:28px;}
+#buttonLine ul {float:right;}
+#buttonLine .navbar-nav>li>a {height:23px;padding:3px 8px 3px 8px;}
+#buttonLine .navbar-nav>li>.dropdown-menu {margin-top:2px;}
+#buttonLine a {border:0px;}
+#buttonLine .reminder {font-size:9px;display:block;margin-top:-24px;margin-left:13px;padding:3px;}
+#buttonLine .userAccount, #buttonLine .bhSites {max-width:235px;z-index:1000}
+#buttonLine .userAccount span {padding-left:10px; padding-right:10px;}
+#buttonLine .bhSites .dropdown-menu a {padding-top:5px;padding-bottom:5px;line-height:1.5;border-bottom:1px solid #eeeeee;}
+
+#searchbox {padding-left: 10px;}
+#searchbox input {border: 0px;font-size: 100% !important;padding: 3px 5px 3px 5px;}
+#searchbox button {border: 0px;padding: 3px 3px 0 3px; margin-left:-4px;}
+
+#contentBody {padding:40px 15px 5em 15px;}
+#content, #app {margin-bottom:10em;border-left:20px solid #fff;padding-right:0}
+#content .nav a, #content table.noStripe strong a {text-decoration:none;}
+.register a, #homeContent a, #content a, #app a {text-decoration:underline;}
+#content a.btn, #app a.btn, #app .helpButton a, #app .lookupHelp {text-decoration:none;}
+
+#app .appHeader {width:100%;clear:both;float:left;}
+#app .appHeader h2 {width:auto; float:left;padding-right:10px;}
+#app .appHeader .appPageTitle {margin-top:2px;float:left;padding-left:10px;}
+
+#memberContactBar, #customerContactBar {padding:20px}
+#memberContactBar .btn, #customerContactBar .btn {border:0px;}
+
+#footer {padding:25px 10px 0px 10px;}
+#footer img {margin-top:10px;}
+#footer ul.breadcrumb {padding-left:0;}
+
+.psHelpButton, .helpButton {display: inline-block;padding: 3px 6px;margin-bottom: 0;font-size: 14px;line-height: 1.428571429;text-align: center;white-space: nowrap;vertical-align: middle;cursor: pointer;border: 1px solid transparent;border-radius: 4px;-webkit-user-select: none;}
+
+.highlight {padding:0 1em 1em 1em; margin-bottom:1em;}
+.highlight .nav.nav-list>li>a {padding-left:15px;}
+.noStripe {margin-top:20px;}
+
+
+.newWindow {background-repeat:no-repeat; background-position:right;padding-right:18px;}
+.breadcrumb {background-color:transparent;}
+.well {border-radius:0px;-webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,0.0); box-shadow: inset 0 0px 0px rgba(0,0,0,0.0);}
+.well h3, .well h4, .well .h5 {margin-top:5px}
+.lastUpdate {margin-top:2em; padding-top:7px;}
+.panel, .panel-group .panel, .panel-heading, .nav-tabs>li>a, .form-control, .nav-pills>li>a {border-radius:0px;}
+.panel {margin-bottom: 20px;border: 0px;border-radius: 0px; padding-right: 0px;padding-left: 0px;box-shadow: 0 1px 1px rgba(0,0,0,0.0);-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.0);}
+span.panel-title {cursor:pointer;}
+.nav-tabs {padding-left:10px;}
+.nav-tabs.right-tabs>li:first-child {padding-left:0px;}
+.nav-tabs.right-tabs>li {float:right;}
+.nav-tabs.right-tabs {margin-top:-40px;padding-right:10px;}
+.thumbnail {border:0px;}
+.thumbnail img {border:1px solid #d6d6d6;}
+.thumbnail h4 {margin-top:3px}
+.thumbnail h4 a {text-decoration:none;cursor:pointer;}
+.thumbnail .caption {padding:9px 5px;}
+.nav.nav-list>li>a, .nav.nav-list>li>a:hover {padding:9px 25px 9px 12px;background-repeat:no-repeat;background-position:right 10px;}
+.nav.nav-list.nav-icon>li>a, .nav.nav-list.nav-icon>li>a:hover {background-image:url(/media/1525/arrow-right.png);}
+.nav.nav-list>li.active>a {background-image:url(/media/1525/arrow-right.png);background-position:right bottom;}
+.panel-heading a {background:none;border:0px;text-decoration:none;}
+.ui-menu-item {padding:7px 12px;border-bottom:1px dotted #fff;}
+.ul-menu-item a {cursor:pointer;}
+
+.list-group-item {border-radius:0px;border-top:0px;border-left:0px;border-right:0px;}
+.list-group-item:first-child {border-top-right-radius:0px;border-top-left-radius:0px;}
+.list-group-item:last-child {border-bottom-right-radius:0px;border-bottom-right-radius:0px;}
+.list-group-item>a:hover {background:none;}
+
+.carousel-control {text-shadow: 0 1px 2px rgba(0,0,0,0);}
+
+body.customer .myPage .tab-pane {min-height:200px;}
+
+/*#libMenu {padding:10px 0 10px 0;}
+h2.libHeading {margin-top:1em}
+.spotlightImage {margin-left:-15px;}
+#libTools {margin-top:2em;}
+.tabBorder .tab-content {padding-top:1.5em;}
+.tabBorder h3 {margin:0 0 10px 15px;}*/
+
+/* LIBRARY */
+
+#content.library {border-left:35px solid #fff;}
+.library .highlight {padding:1em 0 1em 0}
+.library .highlight h3 {margin:0 0 12px 15px;}
+#libSporlightBlock {margin-bottom:30px;overflow:hidden;}
+.article {padding-top:20px;}
+#content .article .well a {text-decoration:none;}
+#libAZBHDROP, #libAZMDDROP {width:265px;}
+#libAZBHDROP>div>a, #libAZMDDROP>div>a {width:auto !important;}
+
+/* library 
+
+h2#libHeading {margin:0; padding:0.75em 0 0 0}
+#libContent.topic {margin-top:0}
+#libContent.ADAM {margin-top:1.5em;}
+.library .tabContainer, .library .contentContainer {padding:0 .7em 0 0;background-repeat:repeat-y}
+#healthCenterList dt {display:none}
+.library #libIntro {float:left; width:100%; margin-bottom:3em;margin-top:1em}
+.libImage {background-repeat:no-repeat; width:318px; height:200px; float:left;overflow:hidden}
+.libText {overflow:hidden;padding:0 0.5em 0 1em;height:196px;line-height:1.4;}
+.libText h3 {margin-top:0}
+.libText h4 {margin:8px 0 3px 0}
+.library .tileBlock h3 {margin-bottom:0.75em}
+#libHighlights .highlight{width:89%}
+.library #contentMain {padding:0 1.25em 1.5em 1.5em;margin: 0;overflow: auto;width: auto;}
+.library #libHighlights {margin:1em 0 1em 1em;width:24%;float: right;}
+.library .highlight {overflow:hidden;}
+#libMenu {width:97%;padding:0.5em 1em 0.5em 0.5em;float:left}
+#libMenu #libCenter {width:28%;}
+#libMenu #libAZ {width:28%;}
+#libSearch {border-right:1px solid #d6d6d6; border-left:1px solid #d6d6d6; padding:0.5em 1em 0 1em; margin-right:2em;}
+#libMenu .miniTabs {width:23em;}
+#libCenter .miniTabs {width:20em;}
+#searchFilters {font-size:90%;border:1px solid #d6d6d6;padding:5px;margin:3.5em 0 0.5em 0;width:14em;}
+.libAZ li, .accordionGroup .libAZ li {margin:0 7px 7px 0;}
+.accordionGroup .libAZ {margin-left:0.5em; width:90%}
+.accordionGroup .libAZ li {float:left; width:auto !important; clear:none;}
+#libAZMenu li a, .libAZ li a {padding:5px !important;text-align:center;}
+#libAZMenu {margin:1em 0 1em 0;padding:0.5em 1em 0 0.5em;width:98%;float:left;}
+#libAZMenu li {margin:0 0.3em 0 0.3em}
+#libAZMenu.healthaz {height:50px;}
+.AZMenuSub {position:absolute;margin-left:-105px !important;}
+.AZMenuSub li {margin:0}
+.AZMenuSub li a {padding:0 0.3em 0 0.3em; width:3.9em}
+#Bsub, #Csub, #Dsub {margin-left:-30px !important;}
+#Asub {margin-left:0 !important;}
+#Zsub {margin-left:-150px !important;}
+.library .az .column{width:49%}
+.library .az {padding:0 1em 1em 1em;width:96%}
+.aliasHeading {padding:3px;margin:0.5em 0 0.5em 0}
+.aliasList {padding:0.2em 0 0.5em 0}
+.aliasList a {padding-left:1.5em}
+#spotHighlight ul{margin:0.5em 0 0.5em 1.5em !important; line-height:1.6em;}
+#spotHighlight ul li{list-style-type:disc !important;margin-top:0.25em;}
+.library #contentMain {padding-top:1em !important}
+#libTools .column ul li {padding-top:0;padding-bottom:0;float:none;}
+#libTools h4 {padding-top:1em;margin-top:0}
+#selectedTopics p {margin:0 0 5px 0;padding:0}
+#selectedTopics ul {margin:0; padding:0;}
+#selectedTopics li {list-style:none;margin:0;padding-left:0}
+.library .checkList li {line-height:1.6}
+
+.library #visHeader {width:160px;margin:10px 0 0 578px;top:355px;position:absolute;}
+.library #visHeader .image { margin:5px 15px 15px 0;font-size:90%;float:left;}
+.library #visHeader .image img {border:1px solid #999999}
+.library .references, .ADAMreviewInfo, .ADAMDisclaimer {clear:both !important;}
+.ADAMreviewInfo, .ADAMDisclaimer {font-size:90%;line-height:normal}
+.ADAM .highlight {border:0px solid #ffffff; background:none;margin-left:10px}*/ 
+        
+
+
+/* PRESENTATION STYLES */
+/* ------------------- */
+body{font:12px Verdana, Geneva, Arial, Helvetica, sans-serif;line-height:1.6;}
+.serif {font-family:Georgia, "Times New Roman", Times, serif}
+h1, h2, h3, h4, h5, h6, nav, #mainNavi, #secNav, #programName, #siteName, .btn, .appPageTitle, .helpButton, .panel-title, .panel-heading, .noStripe p strong, .highlight .nav-list li a, .fullwidth-title a, .notifyLink a, .tabs-left>li>a, .list-group .list-group-item a, .nav-list li a, .homePageOr, .captionHeadline, .nav {font-family: 'Merriweather Sans Light', Arial, Helvetica, sans-serif;}
+#footer nav, .ftrText, .ftrPhone {font-family: 'Merriweather Sans', Arial, Helvetica, sans-serif;}
+#ribbon li.active a, .tollfree, #secNav ul li .active, #secNav ul li .active ul li a.active, .noBullet li a.active, .bold, label, .label, .ui-state-active a, .accordionGroup .ui-state-active a, #mainNav li a, #breadCrumbs li:first-child a, #libAZMenu li a, #libAZMenu .AZMenuSub li a.active, .orgSignIn, .aliasHeading, label.buttonActive, #libAZMenu .AZMenuSub li a:hover, .bold {font-weight:bold}
+#libAZMenu .AZMenuSub li a, h1, h2, h3, h4, h5, h6, #mainNav li a, .mobile #mainNav.accordionGroup ul ul li a, #secNav li.active ul li a, .optiongroup label, .ui-state-default a, .aliasHeading ul, label.critButton, .normalFont, .btn, .noStripe p strong {font-weight:normal}
+.homePageOr, .ADAMreviewInfo, .lastUpdate, .italic{font-style:italic}
+.uppercase, .doButton, #mainNavi li a, .library h2, #mypageTabs h2, #myPageContent #rightLibrary h4, .btn {text-transform:uppercase}
+#libraryTopics h3, #benefitsTopics h3, #mainNavi li .dropdown-menu li a, #cafewell h2, #registerButton .dropdown-menu li a {text-transform:none}
+#chatBtn a, #chatBtn a:visited, #chatBtn a:hover, #tDemand.panel .list-group .list-group-item a:hover, .list-group .list-group-item a:hover {text-decoration:none}
+
+#psApp #psAppHeader h2, #psApp #psAppHeader #psPageName, #psApp #psSearchTile h3{font-size:150%;}
+#app h2, h3.libHeading, #welcome .pageTitle, .ftrText, .ftrPhone{font-size:175%;}
+.highlight h3, .highlight h5, #custom #highlightBlock h5{font-size:150%;}
+
+.quotemark								{font-size:42px;}
+.captionHeadline						{font-size:36px;}
+h1, .h1, .homePageOr                    {font-size:30px;}
+h2, .h2, h2#pHeading, h3.azHeading, h2#libHeading       {font-size:26px;}
+#siteName, #mypageTabs .personalize-circle h2        {font-size:24px;}
+#myPageContent h2, .side-tabs h3, #mypageTabs #cafewell h2, body.customer .myPage h2          {font-size:22px;}
+.article h3          {font-size:20px;}
+h3, .h3, #programName, #mypageTabs h2       {font-size:18px;}
+h4, .h4, .panel-title, .appPageTitle, .fullwidth-title h3, .highlight h3, .article .well h3       {font-size:16px;}
+h5, .h5, .noStripe p strong {font-size:14px;}
+h6, .h6, #mainNavi li a, #secNav li a, .thumbnail h4, .nav-list li a, .nav-tabs    {font-size:13px;}
+#footer nav                 {font-size:12px;}
+
+
+ul#tabNav li a, ul.tabs li a, .nav-tabs.tabRight > li > a{font-size:11px}
+.doButton, label, .label, blockquote, footer h6, #utilityNav ul li, #siteLinks ul li, .links, #otherSiteLinks ul li, .benefitsList, .benefitsSecList > li > a, .showbiz p{font-size:90%}
+#footer h6, fieldset legend, .actButton, .cancelButton {font-size:110%;}
+.smallInputText,select,input,textarea{font-size:120% !important}
+#welcome ul {font-size:95%;}
+
+/* COLORS */
+#mainNavi li a, #secNav ul, .critButton.container, .myPage .tileLinks li.active a, .miniTabs .tileContent, .invisibleContent, #libAZMenu .active, .AZMenuSub, table.noStripe tr, #main, ul.tabs .ui-state-active a, .accordionGroup .ui-state-active a, #libAZMenu li a.active, #libAZMenu li a:hover, #custom #footerGroup .centeredContent, .library #contentMain, .library .az, .highlight, header, #contentBody, #search .button, .sb-navigation-left, .sb-navigation-right, .sb-light-skin .detailholder, .backGroundWhite  { background-color: #ffffff;}
+/*#default2 #buttonLine, */#default2, #default2 #footer {background-color:#1f1f1f}
+#mainNavi .dropdown-menu li a, #provSearchResults tbody tr:nth-child(even), #search, .breadcrumb, .well, #buttonLine a {background-color:transparent;}
+.username_error, .errormessage, .registration #email_error {background-color:rgba(200,16,46,0.2)}
+#buttonLine .reminder {background-color:#C8102E;}
+#searchbox input, #searchbox button {background-color:rgba(255,255,255,0.4)}
+
+.panel-heading, .well, .tileBlock .highlight, #slideShow-container {background: #f7f7f7; /* Old browsers */
+background: -moz-linear-gradient(top, #ffffff 0%, #f7f7f7 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(100%,#f7f7f7)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #ffffff 0%,#f7f7f7 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #ffffff 0%,#f7f7f7 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #ffffff 0%,#f7f7f7 100%); /* IE10+ */
+background: linear-gradient(to bottom, #ffffff 0%,#f7f7f7 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7f7f7',GradientType=0 ); /* IE6-9 */
+}
+
+#default2 #utilArea {background: #1f1f1f; /* Old browsers */
+background: -moz-linear-gradient(left, #ffffff 50%, #1f1f1f 80%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(50%,#ffffff), color-stop(80%,#1f1f1f)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, #ffffff 50%,#1f1f1f 80%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, #ffffff 50%,#1f1f1f 80%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, #ffffff 50%,#1f1f1f 80%); /* IE10+ */
+background: linear-gradient(to right, #ffffff 50%,#1f1f1f 80%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#1f1f1f',GradientType=1 ); /* IE6-9 */
+}
+
+
+/* TEXT */
+#mypageTabs .personalize-circle h2, .home #mainNavi li.active a, #buttonLine li.open a:hover, #tDemand.panel .list-group .list-group-item:hover, .list-group .list-group-item:hover, #tDemand.panel .list-group .list-group-item a:hover, .list-group .list-group-item a:hover, .tabs-left>li.active>a, .tabs-left>li.active>a:hover, .tabs-left>li.active>a:focus, .tabs-left>li>a:hover, .library .highlight ul li a:hover, #mainNavi li.open a, #mainNavi li.open ul li a:hover, .g06k001  #mainNavi li#navItem01 a, .g06k02k #mainNavi li#navItem02 a, .g06k02s #mainNavi li#navItem02 a, .g06k06v #mainNavi li#navItem02 a, .g06k06w #mainNavi li#navItem02 a, .g06k029 #mainNavi li#navItem03 a, .g06k030 #mainNavi li#navItem03 a, .g06k02c #mainNavi li#navItem03 a, .g06k02u #mainNavi li#navItem04 a, .g06k031 #mainNavi li#navItem04 a, .g06k02t #mainNavi li#navItem04 a, .g06k05f #mainNavi li#navItem04 a, .g06500b #mainNavi li#navItem01 a, .g065063 #mainNavi li#navItem02 a, .g065063 #mainNavi li#navItem02 a:hover, .g065066 #mainNavi li#navItem03 a, .g065066 #mainNavi li#navItem03 a:hover, .g06506u #mainNavi li#navItem04 a, .g06506u #mainNavi li#navItem04 a:hover, .g065068 #mainNavi li#navItem05 a, .g065068 #mainNavi li#navItem05 a:hover, .g065064 #mainNavi li#navItem06 a, .g065064 #mainNavi li#navItem06 a:hover, .g065014 #mainNavi li#navItem07 a, .g065014 #mainNavi li#navItem07 a:hover, #footer h6, #buttonLine .reminder, #mainNavi li a:hover, .psButton, .searchResultsLink a, .cTimeValue #COMPUTE, #custom.advanced #mainNav.reverse li a, #mainNav li.active a, #mainNav li a:hover, #mainNav ul li ul li a:hover, #mainNav ul li.active ul li a:hover, #mainNav ul li:hover, #mainNav ul li.sfhover, #custom.advanced #mainNav.reverse li.active a:hover, #custom.advanced #mainNav.reverse ul ul li a:hover, #secNav a:hover, ul.tabs a:hover, .ui-state-active a:hover, .accordionGroup dt a:hover, .ui-accordion li a:hover, .accRound li a:hover, .accRound li a.ui-state-active, .accRound ul ul li a:hover, .ui-state-active:hover, .helpButton a, .helpButton a:visited, .pageHeadingBackground, .features .detailsLink a, .doButton, .actButton, .cancelButton, #chatBtn a, a.button:hover, .highlightText, .cluetip-default h3#cluetip-title,#utilityNav ul ul li a:hover,.txtColorWhite, #default2 #mainNav li a, #default2 footer p, #default2 .benefitsList li > a:hover, #default2 .benefitsList li.active > a, .benefitsList > li.active > a, .benefitsList > li > a:hover, .panel-title a:hover  { color: #ffffff;}
+.closeLink {color:#ffffff !important}
+.ftrText, .ftrPhone {color:rgba(255,255,255,0.7);}
+h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited  { color:inherit !important;}
+
+/* BORDERS */
+#utilityNav li a, .borderTransparent {border:1px solid transparent;}
+#memberContactBar .btn:hover {border:1px solid #fff;}
+.borderWhite { border-color:#ffffff;}
+#buttonLine .caret {border-top-color:#fff;}
+#mainNavi li a:hover .caret, #mainNavi li.open a .caret, .g06k001  #mainNavi li#navItem01 a .caret, .g06k02k #mainNavi li#navItem02 a .caret, .g06k02s #mainNavi li#navItem02 a .caret, .g06k06v #mainNavi li#navItem02 a .caret, .g06k06w #mainNavi li#navItem02 a .caret, .g06k029 #mainNavi li#navItem03 a .caret, .g06k030 #mainNavi li#navItem03 a .caret, .g06k02c #mainNavi li#navItem03 a .caret, .g06k02u #mainNavi li#navItem04 a .caret, .g06k031 #mainNavi li#navItem04 a .caret, .g06k02t #mainNavi li#navItem04 a .caret, .g06k05f #mainNavi li#navItem04 a .caret, .g06500b #mainNavi li#navItem01 a .caret, .g065063 #mainNavi li#navItem02 a .caret, .g065066 #mainNavi li#navItem03 a .caret, .g06506u #mainNavi li#navItem04 a .caret, .g065068 #mainNavi li#navItem05 a .caret, .g065064  #mainNavi li#navItem06 a .caret, .g065014 #mainNavi li#navItem07 a .caret {border-top-color:#fff; border-bottom-color:#fff;}
+ul.tabs .ui-state-active a, .tileLinks li a { border-bottom-color:#ffffff;}
+.accordionGroup .tileContent { border-top-color:#ffffff;}
+#mainNav ul ul li a { border-bottom-color:#ffffff !important;}
+#provSearchResults tbody tr th, #custom #mainNav li a {border-right:1px solid #ffffff;}
+/*#default2 #utilArea {border-top: 7px solid #1f1f1f;}*/
+#libContent.search, #tMyAccount .tileContent, #tMyAccount.tileGroup, .callout, #search, #search fieldset, #search input, blockquote, #mypageTabs .side-tabs .tab-pane .tab-pane {border:none;}
+.tabBorder .tab-content {border-top:0px;}
+#secNav li.active a, #secNav li.active ul li a {border-bottom:0px;}
+#mainNavi .dropdown-menu li a {border-bottom:1px solid #ffffff;border-right:0px;border-left:0px;}
+
+/* IMAGES */
+
+#default2 #mainNav li.active a {background-image:none;}
+#default2 #contentBody {background:url(/media/1038/mosaic-stream.png) no-repeat bottom right}
+/*#default2 #buttonLine {background-image:url(/media/1010/corner-black.gif);}*/
+.menutrigger, .critLink{background-image:url(/media/1059/accordianheading_expanded.gif) !important;} 
+.library .contentContainer, .library .tabContainer {background-image:url(/media/1033/libBkgrnd.gif)}
+#psApp #psSearchTile ul.tab-items a, .accordionGroup .ui-state-default, ul.tabs li a, .myProfile #myTopics h3, .critButton {background-image:url(/media/1060/accordionbkgrnd.png);}
+#psApp #psSearchTile ul.tab-items a:hover, .psButton:hover, a.button:hover, .actButton:hover, .btn:hover, .cancelButton:hover, ul.tabs li a:hover, #chatBtn a:hover, .cTimeValue #COMPUTE {background-image:none;}
+.accordionGroup .ui-state-default a, .accordionGroup .ui-state-default a:hover {background-image:url(/media/1051/rightarrow.gif);}
+#custom .accordionGroup .ui-state-default a, #custom .accordionGroup .ui-state-default a:hover {background-image:url(/media/1052/rightarrow2.gif);}
+.accordionGroup .ui-state-active a, .accordionGroup .ui-state-active a:hover {background-image:url(/media/1023/downarrow.gif);}
+#custom .accordionGroup .ui-state-active a, #custom .accordionGroup .ui-state-active a:hover {background-image:url(/media/1024/downarrow2.gif);}
+.tileLinks li.active a {background-image:url(/media/1056/tileLinkArrow.gif);}
+#fHighlight2.image {background-image:url(/media/1001/conf_img.gif);}
+.newWindow {background-image:url(/media/1039/newlaunch.gif);}
+#custom.basic header {background-image:url(/media/1014/custom_banner_basic.jpg) !important}
+#custom #mainNav {background-image:url(/media/1022/custom_navbkgrnd.jpg);}
+#custom #mainNav li.active a, body#custom.g065073 #mainNav li#navItem01 a, body#custom.g03s #mainNav li#navItem01 a, body#custom.g06x001 #mainNav li#navItem01 a, body#custom.g06x #mainNav li#navItem01 a, body#custom.g01k #mainNav li#navItem01 a, body#custom.g01k000 #mainNav li#navItem01 a, body#custom.g01k001 #mainNav li#navItem01 a, body#custom.g01l001 #mainNav li#navItem01 a, body#custom.g065000 #mainNav li#navItem01 a, body#custom.g06500b #mainNav li#navItem01 a, body#custom.g010 #mainNav li#navItem01 a, body#custom.g065 #mainNav li#navItem01 a, body#custom.g03s000 #mainNav li#navItem01 a, body#custom.g08l000 #mainNav li#navItem01 a, body#custom.g010001 #mainNav li#navItem01 a, body#custom.g090000 #mainNav li#navItem01 a, body#custom.g090 #mainNav li#navItem01 a {background-image:none !important;}
+#custom #sectionHeading {background-image:none;}
+body.member.globalNav2 #secNav, body.g077006 #secNav,body.g077007 #secNav, body.g07707b #secNav,body.g077005 #secNav, body.g065063 #secNav {background-image:url(/media/1015/custom_leftimg02.jpg);}
+body.member.globalNav3 #secNav, body.g091000 #secNav, body.g07707a #secNav, body.g065066 #secNav {background-image:url(/media/1016/custom_leftimg03.jpg);}
+body.member.globalNav4 #secNav, body.g06506u #secNav, body.g065091 #secNav {background-image:url(/media/1017/custom_leftimg04.jpg);}
+body.member.globalNav5 #secNav, body.g065068 #secNav {background-image:url(/media/1018/custom_leftimg05.jpg);}
+body.member.globalNav6 #secNav, body.g065064 #secNav {background-image:url(/media/1019/custom_leftimg06.jpg);}
+body.member.globalNav7 #secNav, body.g065014 #secNav, body.g01l001 #secNav {background-image:url(/media/1020/custom_leftimg07.jpg);}
+
+body.customer.globalNav2 #secNav, body.g06k02k #secNav, body.g06k02s #secNav, body.g06k06v #secNav, body.g06k06w #secNav {background-image:url(/media/1539/custom_leftimg08.jpg)} 
+body.customer.globalNav3 #secNav, body.g06k029 #secNav, body.g06k030 #secNav, body.g06k02c #secNav {background-image:url(/media/1540/custom_leftimg09.jpg)} 
+body.customer.globalNav4 #secNav, body.g06k02u #secNav, body.g06k031 #secNav, body.g06k02t #secNav, body.g06k05f #secNav{background-image:url(/media/1541/custom_leftimg10.jpg)} 
+
+
+body#default.home{background-position:0 117px !important;}
+body#default.home #mainLogo {background-image:url(/media/1035/magellanlogo_homepage.gif) !important;}
+body#default.home #mainNav li.active a{background-image:url(/media/1036/mainnav_active-arrow_home.gif);}
+body.g092000 header {background-image:url(/media/1003/banner_global.jpg);} 
+body.g092000 #sectionHeading h1, body.g092000 #secNav, body.g092000 #container{background:none;} 
+body.g092000 #commonHighlights, body.g092000 ul#utilityNav {display:none;} 
+body.g092000 #main {background:transparent url(/media/1058/whiteBkgrnd.gif) 0 100px repeat-x;} 
+body.g092000 #app {background:url(/media/1025/globalEAP.jpg) top right no-repeat;overflow:hidden;} 
+body.g092000 #app h1 {margin-bottom:0}
+body.g092000 #app .btn {margin:0;}
+body.g092000 #theContent #abroad.halfWidth, body.g092000 #theContent #citizens.halfWidth {width: 44%;}
+#custom.advanced #mainNav.customNavBSC {background-image:none;}
+#custom.advanced #mainNav.customNavBSC ul {border-top-width:5px;border-bottom-width:0;}
+#custom.advanced #mainNav.customNavBSC ul ul {border-bottom-width:1px;}
+#SearchListHtml input{display:none;}
+#searchListBlock h4 {text-align: center;margin-top: 0px;}
+.critButton.container {width: 200px; height: 116px;background-color: #fff;background-image:none;}
+.critButton.container label {font-size: 9px;}
+.custom-width {width: 90px; }
+.eap {width: 96%;margin-bottom: 10px;}  
+#psApp .psDistSlider #psDistance{margin-top:-18px;position:absolute;font-size:10px !important;margin-left:56px;}
+#psApp .psDistSlider #psSlider {margin-top:2px;}
+#psApp #psSearchTile {width:120% !important;}
+#psApp #psSearchTile .psAddFilter, #psApp #psSearchTile .psChangeFilter {background-image:url(/media/1043/psAdd.png);padding-bottom:1px;}
+#psApp #psAppHeader h2 {margin: 0.5em 0 0.5em 0;}
+#psApp #psAppHeader {position: absolute;margin: 0px;overflow: hidden;width: 100%;}
+.psApp #psApp {padding-left:1.5em;width:97.5%}
+.psApp #secNav {margin:1em 0 2.5em 0 !important;padding-bottom:0px;}
+.psApp #psApp #psSearchResults, .psApp #psApp #psDetails, .psApp #psApp #psIntro {width:100% !important}
+#custom.psApp #secNav {background-image:none !important;padding-bottom:0;}
+#custom.psApp #main {height:100%;display:table}
+
+#cafewell {background:url(/media/cafewell.jpg) no-repeat bottom right;
+background:url(/media/cafewell.jpg) no-repeat bottom right, -moz-linear-gradient(top, #ffffff 0%, #f7f7f7 100%); /* FF3.6+ */
+background:url(/media/cafewell.jpg) no-repeat bottom right, -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(100%,#f7f7f7)); /* Chrome,Safari4+ */
+background:url(/media/cafewell.jpg) no-repeat bottom right, -webkit-linear-gradient(top, #ffffff 0%,#f7f7f7 100%); /* Chrome10+,Safari5.1+ */
+background:url(/media/cafewell.jpg) no-repeat bottom right, -o-linear-gradient(top, #ffffff 0%,#f7f7f7 100%); /* Opera 11.10+ */
+background:url(/media/cafewell.jpg) no-repeat bottom right, -ms-linear-gradient(top, #ffffff 0%,#f7f7f7 100%); /* IE10+ */
+background:url(/media/cafewell.jpg) no-repeat bottom right, linear-gradient(to bottom, #ffffff 0%,#f7f7f7 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7f7f7',GradientType=0 ); /* IE6-9 */
+}
+
+/*#tGetStrted {background-image: url(http://dev.includes.magellanassist.com/media/1528/personalize-unregistered.png)}*/
+
+/* jQuery Carousel Plugin */
+.everslider {position: relative;width: 100%;overflow: hidden;margin: 0 0 1px;padding-bottom:25px;}
+.everslider .es-slides {position: relative;width: 100000px;margin: 0;padding: 0;list-style: none;-webkit-transform: translate3d(0,0,0);}
+.everslider .es-slides > li {position: relative;float: left;padding: 0!important;border: 0!important;width: 200px;height: 175px;margin: 0 10px 0 0;cursor: default; cursor: -webkit-grab; cursor: -moz-grab;-webkit-transform: translate3d(0,0,0);}
+.everslider.es-swipe-grab .es-slides > li {cursor: default; cursor: -webkit-grabbing; cursor: -moz-grabbing; }
+.everslider .es-slides img {width: 100%;height: auto;max-width: none;}
+.everslider {background: url(/media/1042/preload.gif) no-repeat center;}
+.everslider.es-slides-ready {background: none;}
+.es-slides {visibility: hidden;}
+.es-slides-ready .es-slides {visibility: visible;}
+.es-navigation a {position: absolute;top: 50%;margin-top: -17px;padding: 7px;}
+.es-navigation .es-prev { left: 0 }
+.es-navigation .es-next { right: 0 }
+.es-navigation .es-first,
+.es-navigation .es-last {opacity: 0.5;filter: alpha(opacity=50);cursor: default;}
+.es-navigation a span {display: block;width: 20px;height: 20px;text-indent: -9999px;}
+.es-navigation .es-prev span, .es-navigation .es-next span, .es-navigation .es-prev span.alt-arrow, .es-navigation .es-next span.alt-arrow {background-image: url(http://dev.includes.magellanassist.com/media/1062/arrows-slide.png); background-repeat:no-repeat}
+.es-navigation .es-prev span {background-position: 0 0;}
+.es-navigation .es-next span {background-position: -20px 0;}
+.es-navigation .es-prev span.alt-arrow {background-position: 0 -20px;}
+.es-navigation .es-next span.alt-arrow {background-position: -20px -20px;}
+.es-pagination {position: absolute;left: 50%;bottom: 5px;}
+.es-pagination a {position: relative;right: 50%;float: left;width: 13px;height: 13px;overflow: hidden;background: url(http://dev.includes.magellanassist.com/media/1008/bullets.png) no-repeat 0 0;margin: 0 5px 0;text-indent: -9999px;}
+.es-pagination .es-active {background: url(/media/1008/bullets.png) no-repeat -13px 0;}
+.es-ticker {position: absolute;bottom: 0;right: 0;}
+.es-ticker a {display: block;padding: 7px;background: #eee;}
+.es-ticker a span {display: block;width: 20px;height: 20px;text-indent: -9999px;}
+.es-ticker .es-play span {background: url(/media/1055/ticker.png) no-repeat 0 0;}
+.es-ticker .es-pause span {background: url(/media/1055/ticker.png) no-repeat -20px 0;}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+    .es-navigation .es-prev span {background: url(/media/arrows-slide@2x.png) no-repeat 0 0;background-size: 40px 40px;}
+    .es-navigation .es-next span {background: url(/media/arrows-slide@2x.png) no-repeat -20px 0;background-size: 40px 40px;}
+    .es-pagination a {background: url(/media/bullets@2x.png) no-repeat 0 0;background-size: 26px 13px;}
+    .es-pagination a.es-active {background: url(/media/bullets@2x.png) no-repeat -13px 0;background-size: 26px 13px;}
+    .es-ticker .es-play span {background: url(/media/ticker@2x.png) no-repeat 0 0;background-size: 40px 20px;}
+    .es-ticker .es-pause span {background: url(/media/ticker@2x.png) no-repeat -20px 0;background-size: 40px 20px;}
+}
+.fullwidth-slider .es-slides > li {width: 350px;height: 250px;overflow: hidden;}
+.fullwidth-slider .es-pagination {display:block;}
+.fullwidth-slider .es-navigation a {top: 0;margin-top: 0;}
+.fullwidth-slider .es-ticker {bottom: auto;top: 0;margin-right: 34px;}
+.fullwidth-slider .es-slides > li img  {opacity: 1;-webkit-transition: opacity .3s;-moz-transition: opacity .3s;-o-transition: opacity .3s;transition: opacity .3s;}
+.fullwidth-slider .es-slides > li:hover img {opacity: 0.8;}
+.fullwidth-title {position: absolute;bottom: 0;left: 0;width: 100%;padding: 10px;background-color:#fff;border-bottom: 1px solid #eee;box-sizing: border-box;-moz-box-sizing: border-box;box-shadow: 0 -2px 2px 0 rgba(0,0,0,0.2);}
+.fullwidth-title h3 {margin-top:0}
+.fullwidth-title > a {display: block;}
+.fullwidth-title > a:after {margin-left: 5px;}
+.fullwidth-title span {display: none;margin-top: 5px;}
+.fullwidth-slider .es-slides > li:hover .fullwidth-title {background-color:rgba(255,255,255,0.9)}
+.fullwidth-slider .es-slides > li:hover .fullwidth-title span {display: block;}
+
+
+/* Pullout Items */
+body {overflow-x: hidden;position: relative;}
+.borders.side_right .pullout-button {position:absolute;z-index:2000; border-bottom-left-radius:10px;border-bottom-right-radius:10px;text-align:center;padding:15px 20px 15px 20px;-webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg);border:0px !important;margin:27px}
+
+.pullouts{position: fixed;clear: both;background-color: #eee;z-index: 10000;}
+.pullouts .widget {margin: 0!important;padding: 0!important;height: auto!important;}
+.pullouts .widgettitle, .pullouts .widget-title {margin-top: 0!important;padding-top: 0!important;}
+.pullout-closed {position: fixed;}
+.pullout-opened {z-index: 100010;}
+.reset-position {top: auto;left: auto;right: auto;bottom: auto;height: auto;}
+.pullouts.pullout-closed {-webkit-box-shadow: none!important;box-shadow: none!important;}
+.pullouts.side_left {-webkit-box-shadow: 1px 1px 3px #999;box-shadow: 1px 1px 3px #999;}
+.pullouts.side_right {-webkit-box-shadow: -1px 1px 3px #999;box-shadow: -1px 1px 3px #999;}
+.pullouts.side_top {-webkit-box-shadow: 1px 1px 3px #999;box-shadow: 1px 1px 3px #999;}
+.pullouts.side_bottom {-webkit-box-shadow: 1px -1px 3px #999;box-shadow: 1px -1px 3px #999;}
+.pullout-content {display: block;padding: 10px 20px;clear: both;}
+.pullout-button {position: absolute;margin: 0;padding: 0;background-color: #eee;cursor: pointer;text-align: center;line-height: 17px;}
+.pullout-button span, .pullout-button .icon {display: inline-block;margin: 10px;padding: 0px;vertical-align: top;*display: inline;zoom: 1;}
+.side_left .pullout-button {position: absolute;top: 0;-webkit-box-shadow: 3px 1px 3px #999;box-shadow: 3px 1px 3px #999;}
+.side_right .pullout-button {position: absolute;top: 0;-webkit-box-shadow: -3px 1px 3px #999;box-shadow: -3px 1px 3px #999;}
+.side_top .pullout-button {-webkit-box-shadow: 1px 3px 3px #999;box-shadow: 1px 3px 3px #999;}
+.side_bottom .pullout-button {-webkit-box-shadow: 1px -3px 3px #999;box-shadow: 1px -3px 3px #999;}
+.side_left .pullout-button.rotate {transform: rotate(270deg);transform-origin: bottom right;-o-transform: rotate(270deg);-moz-transform: rotate(270deg);-webkit-transform: rotate(270deg);-ms-transform: rotate(270deg);-o-transform-origin: bottom right;-moz-transform-origin: bottom right;-webkit-transform-origin: bottom right;-ms-transform-origin: bottom right;-webkit-box-shadow: -1px 3px 3px #999;box-shadow: -1px 3px 3px #999;}
+.pullout-button .icon {background: url(/media/1030/icons.png) no-repeat;width: 17px;height: 17px;margin-right: 0;}
+.side_left .pullout-button.rotate .icon {transform: rotate(90deg);transform-origin: none;-o-transform: rotate(90deg);-moz-transform: rotate(90deg);-webkit-transform: rotate(90deg);-ms-transform: rotate(90deg); /* IE 9 */-o-transform-origin: none;-moz-transform-origin: none;-webkit-transform-origin: none;-ms-transform-origin: none;}
+.side_right .pullout-button.rotate {transform: rotate(90deg);transform-origin: bottom left;-o-transform: rotate(90deg);-moz-transform: rotate(90deg);-webkit-transform: rotate(90deg);-ms-transform: rotate(90deg);-o-transform-origin: bottom left;-moz-transform-origin: bottom left;-webkit-transform-origin: bottom left;-ms-transform-origin: bottom left;-webkit-box-shadow: 1px 3px 3px #999;box-shadow: 1px 3px 3px #999;}
+.side_right .pullout-button.rotate .icon {transform: rotate(270deg);transform-origin: none;-o-transform: rotate(270deg);-moz-transform: rotate(270deg);-webkit-transform: rotate(270deg);-ms-transform: rotate(270deg);-o-transform-origin: none;-moz-transform-origin: none;-webkit-transform-origin: none;-ms-transform-origin: none;}
+/*Left Side*/
+.borders.pullouts.side_left {border: 3px solid #fff;border-left: none;}
+.borders.side_left .pullout-button {border: 3px solid #fff;border-left: none;}
+.borders.side_left .pullout-button.rotate {border: 3px solid #fff;border-top: none;}
+.rounded.side_left{border-bottom-right-radius: 10px;}
+.rounded.side_left .pullout-button{border-top-right-radius: 10px;border-bottom-right-radius: 10px;}
+.rounded.side_left .pullout-button.rotate {border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-right-radius: 0px;}
+/*Right Side*/
+.borders.pullouts.side_right {border: 3px solid #fff;border-right: none;}
+.borders.side_right .pullout-button {border: 3px solid #fff;border-right: none;}
+.borders.side_right .pullout-button.rotate {border: 3px solid #fff;border-top: none;}
+.rounded.side_right{border-bottom-left-radius: 10px;}
+.rounded.side_right .pullout-button{border-top-left-radius: 10px;border-bottom-left-radius: 10px;}
+.rounded.side_right .pullout-button.rotate {border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-top-left-radius: 0px;}
+/*Top Side*/
+.borders.pullouts.side_top {border: 3px solid #fff;border-top: none;}
+.borders.side_top .pullout-button {border: 3px solid #fff;border-top: none;}
+.rounded.side_top{border-bottom-right-radius: 10px;}
+.rounded.side_top .pullout-button{border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;}
+/*Bottom Side*/
+.borders.pullouts.side_bottom {border: 3px solid #fff;border-bottom: none;}
+.borders.side_bottom .pullout-button {border: 3px solid #fff;border-bottom: none;}
+.rounded.side_bottom{border-top-right-radius: 10px;}
+.rounded.side_bottom .pullout-button{border-top-left-radius: 10px;border-top-right-radius: 10px;}
+
+/* WELCOME PAGE */
+
+#contentBody.myPage {padding:40px 15px 11em 15px;}
+
+#mypageTabs .tab-pane {padding:40px 0px 40px 0px;-moz-box-shadow: inset 0 0 3px #d6d6d6;-webkit-box-shadow: inset 0 0 3px #d6d6d6;box-shadow: inner 0 0 3px #d6d6d6;}
+#mypageTabs h2 {padding:5px 10px 5px 0px;margin-top:0;}
+#mypageTabs h2.panel-title {padding-left:10px;}
+
+#tChat {margin-bottom:3em;}
+
+#tAnnounce .item {padding:10px 10px 10px 0; /*font-size:12px;font-weight:normal;*/}
+#tAnnounce img {float:left;margin-right:10px;}
+#tAnnounce p, #inthenews p {color:#000;}
+.carousel-caption       {position: relative;z-index: 10;padding-top: 2px;right:0px;left:0px;padding:0px 40px 0 40px;text-align: left;text-shadow:none;}
+.carousel-control.left,.carousel-control.right {background:none !important;margin:15px -20px 0 -20px;z-index:100;}
+.carousel-indicators {bottom: 0px;}
+
+#ribbon                         {border-radius:0px;margin-bottom:0;margin-top:25px;}
+#ribbon ul                      {border-bottom:0px;}
+#ribbon li                      {text-align:center;border-right:1px solid #fff;}
+#ribbon .nav-tabs>li:first-child {margin-left:0;}
+#ribbon li:last-child           {border-right:0px;} 
+#ribbon li a                    {border:0px;height:70px;}
+#ribbon li a i                  {display:block;clear:both;}
+#ribbon li.active:after         {display: inline-block;position:absolute;width: 0;height: 0;margin-left: -10px;vertical-align: middle;border-right: 12px solid transparent;border-left: 12px solid transparent;content: "";clear:both;}
+
+#tNotifications {margin-bottom:2em;float:left;}
+
+/*#tGetStrted {background-repeat:no-repeat;padding: 16.4% 32.8%;}
+.personalize-circle {border-radius:50%;width: 217px;height: 217px;padding: 20% 0 0 5%;text-align:center;opacity:0.7}
+#mypageTabs .personalize-circle h2 {text-align:center;}
+.personalize-circle a {margin-left:-10px;}*/
+
+.list-group-item {}
+#mypageTabs .side-tabs .tab-pane {padding:10px 15px 25px 25px;min-height:375px;-moz-box-shadow: inset 0 0 0 #d6d6d6;-webkit-box-shadow: inset 0 0 0 #d6d6d6;box-shadow: inner 0 0 0 #d6d6d6;}
+#mypageTabs .side-tabs .tab-content .tab-content {margin-left:0px;}
+#mypageTabs .side-tabs .tab-pane .tab-pane {min-height:100%;border:0; padding:10px 15px 25px 15px;}
+.side-tabs {margin-bottom:2em;float:left;clear:both;}
+.side-tabs .tabs-left li:last-child a {border-bottom-left-radius:10px;}
+.side-tabs .tab-content {margin-left:-31px;}
+
+#libraryTopics.side-tabs .tab-content {min-height:270px;}
+#libraryTopics .thumbnail {margin-bottom:15px}
+#libraryTopics .tabset {margin-left:0px;margin-right:0px;}
+#mypageTabs .topic-list h4 {padding-left:12px;margin-top:0}
+
+#libraryTools {margin:10px -15px 15px -15px;}
+
+#cafewell {margin-bottom:2em;}
+#cafewell img {display:none;}
+ul.img-bullet {padding:0 0 20px 25px;}
+ul.img-bullet li {list-style-image:url(/media/1526/checkmark-bullet.png); padding:0px 0 3px 3px;}
+ul.ico-bullet {margin-bottom:2em;}
+ul.ico-bullet li {background:url(/media/1526/checkmark-bullet.png) no-repeat 0px 2px; padding:0px 0 8px 28px;}
+
+
+/* REGISTRATION */
+/*html {background-color:#fff;}*/
+input[type="radio"], input[type="checkbox"] {margin: 0px 0 0;margin-top: 1px \9;line-height: normal;}
+.reg-input-sm {height: 26px;padding: 1px 3px;font-size: 12px;line-height: 1.5;border-radius: 3px;width: 43%;}
+.reg-input-lg {height: 26px;padding: 1px 3px;font-size: 12px;line-height: 1.5;border-radius: 3px;width: 95%;}
+.form-group {margin-bottom:5px;}
+/*.panel {border:1px solid #d9edf7;}*/
+#appHeader {}
+#appHeader h2 {float:left;width:90%;}
+#appHeader .appPageTitle {padding-left:7px;}
+.help-block{float:left;clear:right;width:60%;margin-left: 20px;}
+
+.bv-form .help-block {margin-bottom: 0;}
+.bv-form .tooltip-inner {text-align: left;}
+.nav-tabs li.bv-tab-success > a {color: #3c763d;}
+.nav-tabs li.bv-tab-error > a {color: #a94442;}
+.has-feedback .form-control-feedback {margin-top: -21px;margin-left: 250px;float: left;}
+.form-horizontal .has-feedback .form-control-feedback {top: 0;right: 15px;}
+#modalHelp {margin: auto auto; width:60%; height:75%;overflow:auto;}
+
+/* HOME PAGE */
+
+.home #buttonLine .bhSites {margin-right:10px;}
+.home #buttonLine .btn [class^="icon-"].icon-large, .nav [class^="icon-"].icon-large, .btn [class*=" icon-"].icon-large, .nav [class*=" icon-"].icon-large {
+line-height: 1.4 !important;}
+.home #news h3 {margin-top:0}
+
+
+/* SLIDESHOW ########################################################################################################################################################## */
+#slideShow-container					{border-bottom:5px solid #c9cdcf}
+.bannercontainer                       {background-color:transparent;max-width:1140px;max-height:355px;position:relative;position:relative;margin-left:auto;margin-right:auto;clear:both;}
+.bannercontainer ul, .bannercontainer li  {list-style:none;}
+.banner                                {max-width:1140px;max-height:355px;position:relative;overflow:hidden;}
+.bannercontainer-simple                 {padding:0px;background-color:#fff;width:960px;position:relative;position:relative;margin-left:auto;margin-right:auto;}
+.banner-simple                        {width:1170px;height:600px;position:relative;overflow:hidden;}
+.fullwidthbanner-container              {width:auto;position:relative;padding:0;max-height:356px;overflow:hidden;box-shadow: inset 1px 5px 6px -5px;}
+.fullscreen-container                   {width:auto;position:relative;padding:0;height:100%;}
+.caption.use_slideshow                	{position: absolute;text-shadow: none;line-height: 2.9em;padding: 2px 4px;margin: 1.3em 0 1em 0;border-width: 0px;border-style: none;white-space:normal !important;text-align:left;}
+.caption.sft.learnMore                  {text-align:right;margin-left:-50px;}
+.captionHeadline						{width:450px;}
+.quotemark								{vertical-align: bottom;line-height: 1;}
+.leftquote								{margin-left:-31px;}
+
+/* SETTINGS   *******************************************************/
+.tp-simpleresponsive img                 {-moz-user-select: none;-khtml-user-select: none;-webkit-user-select: none;-o-user-select: none;}
+.tp-simpleresponsive a                  {text-decoration:none;}
+.tp-simpleresponsive ul                 {list-style:none;padding:0;margin:0;}
+.tp-simpleresponsive >ul >li            {list-style:none;position:absolute;}
+.caption.slidelink a div,
+.tp-caption.slidelink a div             {width:3000px; height:1500px;  background:url(/media/571218/coloredbg.png) repeat;}
+.tp-loader                             {background:url(/media/571239/loader.gif) no-repeat 10px 10px; background-color:#fff;  margin:-22px -22px; top:50%; left:50%; z-index:1; position:absolute;width:44px;height:44px;border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;}
+.tp-transparentimg                       {content:"url(/media/000000/transparent.png)"}
+.tp-3d                                {-webkit-transform-style: preserve-3d;-webkit-transform-origin: 50% 50%;}
+.tp-hide-revslider,
+.tp-caption.tp-hidden-caption           {visibility:hidden !important; display:none !important;}
+.tp-caption                           {z-index:1;}
+.tp-caption.black                      {color: #000;text-shadow: none;font-weight: 300;font-size: 19px;line-height: 19px;font-family: 'Open Sans', sans;}
+.tp-caption.noshadow                     {text-shadow: none;}
+.tp-caption a                         {text-shadow: none;  -webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; -ms-transition: all 0.2s ease-out;}
+.tp-caption a:hover                     {color: #ffa902;}
+.tp_inner_padding                      {box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;max-height:none !important;  }
+.tp-caption .frontcorner                {width: 0;height: 0;border-left: 40px solid transparent;border-right: 0px solid transparent;border-top: 40px solid #00A8FF;position: absolute;left:-40px;top:0px;}
+.tp-caption .backcorner                  {width: 0;height: 0;border-left: 0px solid transparent;border-right: 40px solid transparent;border-bottom: 40px solid #00A8FF;position: absolute;right:0px;top:0px;}
+.tp-caption .frontcornertop             {width: 0;height: 0;border-left: 40px solid transparent;border-right: 0px solid transparent;border-bottom: 40px solid #00A8FF;position: absolute;left:-40px;top:0px;}
+.tp-caption .backcornertop              {width: 0;height: 0;border-left: 0px solid transparent;border-right: 40px solid transparent;border-top: 40px solid #00A8FF;position: absolute;right:0px;top:0px;}
+/* BUTTONS    *******************************************************/
+.button                                {padding:6px 13px 5px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; height:30px;cursor:pointer;color:#fff !important; text-shadow:0px 1px 1px rgba(0, 0, 0, 0.6) !important; font-size:15px; line-height:45px !important;background:url(../images/gradient/g30.png) repeat-x top; font-family: arial, sans-serif; font-weight: bold; letter-spacing: -1px;}
+.button.big                            {color:#fff; text-shadow:0px 1px 1px rgba(0, 0, 0, 0.6); font-weight:bold; padding:9px 20px; font-size:19px;  line-height:57px !important; background:url(../images/gradient/g40.png) repeat-x top;}
+.purchase:hover,.button:hover,
+.button.big:hover                      {background-position:bottom, 15px 11px;}
+.button.green, .button:hover.green      {background-color:#21a117; -webkit-box-shadow:  0px 3px 0px 0px #104d0b;-moz-box-shadow:0px 3px 0px 0px #104d0b;box-shadow:   0px 3px 0px 0px #104d0b;  }
+.button.blue, .button:hover.blue        {background-color:#1d78cb; -webkit-box-shadow:  0px 3px 0px 0px #0f3e68;-moz-box-shadow:0px 3px 0px 0px #0f3e68;box-shadow:   0px 3px 0px 0px #0f3e68;}
+.button.red, .button:hover.red          {background-color:#cb1d1d; -webkit-box-shadow:  0px 3px 0px 0px #7c1212;-moz-box-shadow:0px 3px 0px 0px #7c1212;box-shadow:   0px 3px 0px 0px #7c1212;}
+.button.orange, .button:hover.orange    {background-color:#ff7700; -webkit-box-shadow:  0px 3px 0px 0px #a34c00;-moz-box-shadow:0px 3px 0px 0px #a34c00;box-shadow:   0px 3px 0px 0px #a34c00;}
+.tp-simpleresponsive .slotholder *,
+.tp-simpleresponsive img                {-webkit-transform: translateZ(0);-webkit-backface-visibility: hidden;-webkit-perspective: 1000;}
+/* CAPTION MODS@START  ***********************************************/
+.tp-simpleresponsive .caption,
+.tp-simpleresponsive .tp-caption        {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";  -moz-opacity: 0;  -khtml-opacity: 0;  opacity: 0; position:absolute; visibility: hidden;}
+.tp-simpleresponsive img                {max-width:none;}
+/* IE8 HACKS  *******************************************************/
+.noFilterClass                         {filter:none !important;}
+/* SHADOWS    *******************************************************/
+.tp-bannershadow                        {position:absolute;margin-left:auto;margin-right:auto;-moz-user-select: none;-khtml-user-select: none;-webkit-user-select: none;-o-user-select: none;}
+.tp-bannershadow.tp-shadow1             {background:url(/media/571257/shadow1.png) no-repeat; background-size:100%; width:890px; height:60px; bottom:-60px;}
+.tp-bannershadow.tp-shadow2             {background:url(/media/571262/shadow2.png) no-repeat; background-size:100%; width:890px; height:60px;bottom:-60px;}
+.tp-bannershadow.tp-shadow3             {background:url(/media/571267/shadow3.png) no-repeat; background-size:100%; width:890px; height:60px;bottom:-60px;}
+/* NAV bullets  *******************************************************/
+.tpclear                                {clear:both;}
+.tp-bullets                              {z-index:100; position:absolute;bottom:10px !important;left:78% !important;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";-moz-opacity: 1;-khtml-opacity: 1;opacity: 1;-webkit-transition: opacity 0.2s ease-out;-moz-transition: opacity 0.2s ease-out; -o-transition: opacity 0.2s ease-out; -ms-transition: opacity 0.2s ease-out;}
+/*.tp-bullets.hidebullets                 {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";-moz-opacity: 0;-khtml-opacity: 0;opacity: 0;}*/
+.tp-bullets.simplebullets.navbar        {border:1px solid #666; border-bottom:1px solid #444; background:url(/media/571193/boxed_bgtile.png); height:40px; padding:0px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px ;}
+.tp-bullets.simplebullets.navbar-old    {background:url(/media/571249/navigdots_bgtile.png); height:35px; padding:0px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px ;}
+.tp-bullets.simplebullets.round .bullet {cursor:pointer; position:relative;  background:url(/media/571198/bullet.png) no-Repeat top left;  width:20px;  height:20px;  margin-right:0px; float:left; margin-top:-10px; margin-left:3px;}
+.tp-bullets.simplebullets.round .bullet.last{margin-right:3px;}
+.tp-bullets.simplebullets.round-old .bullet     {cursor:pointer; position:relative;  background:url(/media/571208/bullets.png) no-Repeat bottom left;  width:23px;  height:23px;  margin-right:0px; float:left; margin-top:-12px;}
+.tp-bullets.simplebullets.round-old .bullet.last    {margin-right:0px;}
+.tp-bullets.simplebullets.square .bullet        {cursor:pointer; position:relative;  background:url(/media/571213/bullets2.png) no-Repeat bottom left;  width:19px;  height:19px;  margin-right:0px; float:left; margin-top:-10px;}
+.tp-bullets.simplebullets.square .bullet.last        {margin-right:0px;}
+.tp-bullets.simplebullets.square-old .bullet    {cursor:pointer; position:relative;  background:url(/media/571213/bullets2.png) no-Repeat bottom left;  width:19px;  height:19px;  margin-right:0px; float:left; margin-top:-10px;}
+.tp-bullets.simplebullets.square-old .bullet.last   {margin-right:0px;}
+.tp-bullets.simplebullets.navbar .bullet         {cursor:pointer; position:relative;  background:url(/media/571203/bullet_boxed.png) no-Repeat top left;  width:18px;  height:19px;   margin-right:5px; float:left; margin-top:10px;}
+.tp-bullets.simplebullets.navbar .bullet.first      {margin-left:0px !important;}
+.tp-bullets.simplebullets.navbar .bullet.last        {margin-right:0px !important;}
+.tp-bullets.simplebullets.navbar-old .bullet    {cursor:pointer; position:relative;  background:url(/media/571244/navigdots.png) no-Repeat bottom left;  width:15px;  height:15px;  margin-left:5px !important; margin-right:5px !important;float:left; margin-top:10px;}
+.tp-bullets.simplebullets.navbar-old .bullet.first  {margin-left:0px !important;}
+.tp-bullets.simplebullets.navbar-old .bullet.last   {margin-right:0px !important;}
+.tp-bullets.simplebullets .bullet:hover,
+.tp-bullets.simplebullets .bullet.selected          {background-position:top left; }
+.tp-bullets.simplebullets.round .bullet:hover,
+.tp-bullets.simplebullets.round .bullet.selected,
+.tp-bullets.simplebullets.navbar .bullet:hover,
+.tp-bullets.simplebullets.navbar .bullet.selected   {background-position:bottom left; }
+/*  TP THUMBS */
+.tp-bullets.tp-thumbs                   {z-index:100; position:absolute; padding:3px;width:500px;height:70px !important;margin-top:-50px;}
+.fullwidthbanner-container .tp-thumbs   {padding:3px;}
+.tp-bullets.tp-thumbs .tp-mask          {width:500px; height:52px !important;overflow:hidden; position:relative;}
+.tp-bullets.tp-thumbs .tp-mask .tp-thumbcontainer    {width:5000px; position:absolute;}
+.tp-bullets.tp-thumbs .bullet           {width:100px; height:50px;cursor:pointer; overflow:hidden;background:none;margin:0;float:left;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";/*filter: alpha(opacity=50);  */-moz-opacity: 0.5;-khtml-opacity: 0.5;opacity: 0.5;-webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; -ms-transition: all 0.2s ease-out;border:1px solid #d6d6d6;margin-right:7px;}
+.tp-bullets.tp-thumbs .bullet:hover,
+.tp-bullets.tp-thumbs .bullet.selected  {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";-moz-opacity: 1;-khtml-opacity: 1;opacity: 1;}
+.tp-thumbs img                          {width:100%; }
+/*  TP BANNER TIMER  */
+.tp-bannertimer                         {width:100%; height:10px; background:url(/media/571292/timer.png);position:absolute; z-index:200;top:0px;}
+.tp-bannertimer.tp-bottom               {bottom:0px;height:5px; top:auto;}
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
+
+
+/*NEW STYLE BLOCK 060614 */
+
+/*  
+#custom #memberContactBar, #custom #customerContactBar, #custom #memberContactBar .btn:hover, #custom #customerContactBar .btn:hover { background-color:#e1e1e1; }*/
+
+/* ---------------------------------------------------------------------------------------------------------- */
+/* COLOR ALLOCATION. There are two main colors, primary (dark/medium/light) and secondary (dark/medium/light), with two neutral colors (taupe and gray).  */
+
+/* BACKGROUNDS ---------------------------------------------------------------------------------------------------------- */
+
+/* Color 1 - PRIMARY dark */
+#custom, #custom #footer, .psButton, .actButton, .actButton:hover, a.button, a.button:hover, #chatBtn a, .btn-success, #custom .btn-primary, .cTimeValue #COMPUTE, 
+.backGroundPriDk {background-color: #0077c8;}
+
+#custom #utilArea {background: #0077c8; /* Old browsers */
+background: -moz-linear-gradient(left, #ffffff 0%, #d0ecfb 40%, #0077c8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(40%,#d0ecfb), color-stop(100%,#0077c8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, #ffffff 0%,#d0ecfb 40%,#0077c8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, #ffffff 0%,#d0ecfb 40%,#0077c8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, #ffffff 0%,#d0ecfb 40%,#0077c8 100%); /* IE10+ */
+background: linear-gradient(to right, #ffffff 0%,#d0ecfb 40%,#0077c8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#0077c8',GradientType=1 ); /* IE6-9 */
+}
+
+/* Color 2 - PRIMARY medium */
+#custom #buttonLine .open, #custom #memberContactBar, #custom #customerContactBar, .btn-info, .btn-success:hover, .btn-primary:hover, .personalize-circle, .pageHeadingBackground, .cluetip-default h3#cluetip-title, 
+.ui-dropdownchecklist-item-hover, .backGroundPriMed , .eapselfref .pblabel .done, 
+.backGroundPriMed {background-color: #00a8e2;}
+/* Color 3 - PRIMARY light */
+fieldset.psNoBorder legend.psLegendBkgrnd, .library .contentContainer, #libAZMenu, .sectionHeadingBackground, .backGround3, 
+.cluetip-default, .cluetip-default #cluetip-outer, .library .tabContainer, .backGroundPriLt, .eapselfref #progressContainer, 
+.eapselfref.progressBar, .backGroundPriLt  {background-color: #d0ecfb;}
+/* Color 4 - SECONDARY dark */
+#default2 #memberContactBar, #default2 #customerContactBar, #default2 #memberContactBar .btn:hover, #default2 #customerContactBar .btn:hover, #psApp .eapSelfRefBtn, #psApp #psSearchResults .psAboutMeBtn, .psAboutMePopUp .psAttrBtn, #psApp #psDetailsButtons .psButton, 
+select.psFilterSelected.psInput100P option:hover, .psAttrBtn.psButton:hover, #psApp .psHelpButton a, #custom.advanced #mainNav.reverse li:hover, 
+#custom.advanced #mainNav.reverse li.sfhover, #custom.advanced #mainNav.reverse li a:hover, #custom.advanced #mainNav.reverse li.active a:hover, 
+#custom.advanced #mainNav.reverse ul ul li a:hover, .doButton,  .questionMark, 
+.backGroundSecDk { background-color: #3c0558;}
+/* Color 5 - SECONDARY medium */
+.library .highlight ul li a:hover, .helpButton, #default2 #memberContactBar .btn, #default2 #customerContactBar .btn, #mainNavi li a:hover, #mainNavi li.open a, #buttonLine li.open a:hover, .g06k001  #mainNavi li#navItem01 a, .g06k02k #mainNavi li#navItem02 a, .g06k02s #mainNavi li#navItem02 a, .g06k06v #mainNavi li#navItem02 a, .g06k06w #mainNavi li#navItem02 a, .g06k029 #mainNavi li#navItem03 a, .g06k030 #mainNavi li#navItem03 a, .g06k02c #mainNavi li#navItem03 a, .g06k02u #mainNavi li#navItem04 a, .g06k031 #mainNavi li#navItem04 a, .g06k02t #mainNavi li#navItem04 a, .g06k05f #mainNavi li#navItem04 a, #mainNavi li.active a, .g06500b #mainNavi li#navItem01 a, .g065063 #mainNavi li#navItem02 a,  .g065066 #mainNavi li#navItem03 a, .g06506u #mainNavi li#navItem04 a, .g065068 #mainNavi li#navItem05 a, .g065064  #mainNavi li#navItem06 a, .g065014 #mainNavi li#navItem07 a, #psApp .psPageList li a.active, #psApp #psSearchTile #psDocTypeHeader:hover, #psApp #psSearchTile #psDocTypeList li span:hover, #psApp #psSearchTile ul.tab-items a:hover, #psApp #psSearchTile .tab-items li.active a:hover, #custom.advanced #mainNav.reverse li a, #mainNavi li.active ul li a:hover, #mainNavi ul ul li a:hover, 
+#mainNavi li:hover, #secNav a:hover, #secNav a.active:hover, ul.tabs a:hover, .miniTabs ul.tabs .ui-state-active a, 
+ul.tabs .ui-state-active a:hover, .accordionGroup .ui-state-active a:hover, .accordionGroup dt a:hover, .ui-accordion li a:hover, 
+.accRound li a:hover, .accRound li a.ui-state-active, .accRound ul ul li a:hover, .highlightBackground, 
+.backGroundSecMed {background-color:#5c068c;}
+/* Color 6 - SECONDARY light */
+#login, #ribbon, #ribbon .nav-pills>li.active>a, #ribbon .nav-pills>li>a:hover, #ribbon .nav-pills>li.active>a:focus, #ribbon, #ribbon .nav-tabs>li>a, #psApp .psPageList li a:hover, #psApp #psSearchTile #psDocTypeList li span, #psApp .psPageButton:hover, #psApp #psDetails h3, 
+#psApp #psDirections h3, #psApp #psSearchTile ul.tab-items a, .ui-dialog-titlebar.ui-widget-header.ui-corner-all, #welcome ul li a:hover, 
+.stripe a:hover, .borderStripe a:hover, .searchCriteria .title, .cTimeValue #Panel_Results .Summary, #custom.advanced #mainNav.reverse li.active a, #custom.advanced #mainNav.reverse ul ul li a, #custom #secNav ul li ul, #custom #secNav ul li .active, #custom #secNav ul li ul, #custom #secNav.noBullet li a.active, .accRound ul ul li a, ul.tabs li a, 
+.accordionGroup dt.ui-state-default, .accRound li a, .noBullet li a:hover, .noBullet li a.active, .libAZ li a:hover, .backGroundSecLt, 
+.myProfile #myTopics h3, #appABASearch #initialload, #default2 .tab-pane .nav-pills>li.active>a, #default2 .tab-pane .nav-pills>li.active>a:hover, 
+#default2 .tab-pane .nav-pills>li.active>a:focus { background-color:#eee6ea;}
+
+/* NEUTRAL Color 1 - dark taupe */ 
+.backGroundNeutral1Dk { background-color: #f7f3e6; }
+/* NEUTRAL Color 2 - light taupe */ 
+#default2 #mainNavi, .miniTabs .tileContent, .registration #elig_status_inner, .message, .registration #password_message, 
+.registration #email_message, .registration #membership_id_message, .critButton, 
+.backGroundNeutral1Lt { background-color: #f8f5ec;}
+/* GRAY Color 1 - very dark gray  */
+#default2 #buttonLine .open, .fullwidth-slider .es-navigation a, .cancelButton, .cancelButton:hover, .backGroundNeutral2Dk { background-color:#6a737b;}
+/* GRAY Color 2 - medium gray */ 
+.closeLink, .critButton:hover, .buttonActive, #utilityNav ul ul li a:hover, .list-group-item:hover, .backGroundNeutral2Med { background-color: #c0c4c7;}
+/* GRAY Color 3 - extra light gray */ 
+body.customer .myPage .nav-tabs>li>a, #mainNavi .dropdown-menu, .tabs-left>li>a, #provSearchResults tbody:nth-child(even), .callout, #welcome ul, .wordHighlight, .aliasHeading, #organizationSearch, 
+.critLink, .backGround5, .sb-navigation-left:hover, .sb-navigation-right:hover, .slideImage, .backGroundNeutral2Lt { background-color: #f1f1f1;}
+/* GRAY Color 5 - dark gray */ 
+.tabs-left>li.active>a, .tabs-left>li.active>a:hover, .tabs-left>li.active>a:focus, .tabs-left>li>a:hover, .list-group .list-group-item a:hover { background-color: #acb0b4;}
+/* transparent */
+#secNav ul ul li a:hover, #mainNavi li.open ul li a, .g06500b #mainNavi li#navItem01 ul li a, .g065063 #mainNavi li#navItem02 ul li a, .g065066 #mainNavi li#navItem03 ul li a, .g06506u #mainNavi li#navItem04 ul li a, .g065068 #mainNavi li#navItem05 ul li a, .g065064  #mainNavi li#navItem06 ul li a, .g065014 #mainNavi li#navItem07 ul li a  {background-color:transparent;}
+/* HEADLINES */
+#default2 .btn-primary, #tGetStrted img {background-color:#004b98;}
+body.customer .myPage .nav-tabs>li.active>a {background-color:#fff;}
+
+/* TEXT ---------------------------------------------------------------------------------------------------------- */
+
+/* GRAY Color 1 - very dark gray  */
+.captionHeadline, .homePageOr, .btn-default, .btn-default:hover, #ribbon li a, .appPageTitle, #searchbox input, #searchbox button, .lastUpdate, #welcome ul li a, .library .references h3, #app.myPage h3, #programName, #copyright, h4, h5, h6.title, #utilityNav li a, #utilityNav li a:hover, .subHead, .sb-navigation-left, .sb-navigation-right, 
+.txtColorNeutral2Dk { color: #6a737b;}
+/* GRAY Color 3 - extra light gray */
+#searchbox input, #searchbox button, #buttonLine a {color: #f1f1f1;}
+/* GRAY Color 4 - light gray */
+#custom #footer nav li a, .txtColorNeutralLt { color: #e1e5e8;}
+/* GRAY Color 5 - dark gray */ 
+.quotemark, #default2 #footer nav li a, .carousel-control, .ADAMDisclaimer, h6, .txtColorNeutral2Med { color: #acb0b4;}
+
+/* Color 1 - PRIMARY dark */
+.dkBlue, .panel-heading h4 a, #custom #ribbon>ul>.active>a, #custom #ribbon .nav-tabs>li>a:hover, #mainNavi li.open ul li a, .g06500b #mainNavi li#navItem01 ul li a, .g065063 #mainNavi li#navItem02 ul li a, .g065066 #mainNavi li#navItem03 ul li a, .g06506u #mainNavi li#navItem04 ul li a, .g065068 #mainNavi li#navItem05 ul li a, .g065064  #mainNavi li#navItem06 ul li a, .g065014 #mainNavi li#navItem07 ul li a, #buttonLine .dropdown-menu a, #mainNavi li a, #default2 footer #commonHighlights h5, #default2 footer #commonHighlights a, #mainNavi .navbar-nav.navbar-right>li>a, 
+#mainNavi ul ul li a, #secNav ul ul li a:hover, #psApp #psSearchTile ul.tab-items li a, #psApp #psSearchTile legend, .psAboutMePopUp h5, .psRatePopUp h5, #psApp .psBox h4, #psApp #psProfileBox h5,.eap, #searchListBlock h4, #libSearchResults dt, .searchCriteria .title,.cTimeValue h2, 
+.welcomeMember, h3, #custom .highlight h5, a, th, #mainNav ul li.active ul li a, #secNav ul li ul li a.active, 
+#custom.advanced #mainNav.reverse li.active a, #custom.advanced #mainNav.reverse ul ul li a, .noBullet li a:hover, .accordionGroup a:hover, 
+#copyright, intro, ul.tabs li a, label, .label, .optLabel, fieldset legend.label, .txtColorPriDk { color: #0077c8;}
+.critButton, .critButton:visited, .critButton:hover, .libAZ li a:hover, #benefitHighlights h3 a:visited, 
+#search .btn, .eapselfref .pblabel { color: #0077c8 !important;}
+/* Color 2 - PRIMARY medium */
+.ltBlue, h4, .highlight h3, .well h3, .panel-heading h4 a:hover, .noStripe p strong, #psApp .psBox h4, #psApp #psIntro h4, .eapSelfRefBtn, .psRatePopUp h6, #psApp #psQualBox h5, #psApp .psCommentDetails h6, #psApp #psRateBreakdown h5, #psApp #psRateOverall dd, .custom-width, #libSearchResults .topicID, #custom #highlightBlock h5, 
+#app .appPageTitle, #welcome .pageTitle, #main.popUp #app .appPageTitle, .headlineFont, .textHelp, fieldset legend, 
+.recordSet, .txtColorPriMed  { color:#00a8e2;}
+
+/* Color 4 - SECONDARY dark */
+a:hover, #default2 .benefitsList li > a, #custom #sectionHeading a, caption,.txtColorSecDk { color:#3c0558;}
+/* Color 5 - SECONDARY medium */
+#siteName, #ribbon, #ribbon .nav-pills>li.active>a, #ribbon .nav-pills>li>a:hover, #ribbon .nav-pills>li.active>a:focus, #default2 #ribbon>ul>.active>a, #default2 #ribbon .nav-tabs>li>a:hover, .tab-pane dt, #sectionHeading, #sectionHeading a, #sectionHeading a:visited, #sectionHeading a:hover,
+.txtColorSecLt { color: #5c068c;}
+
+/* HEADLINES */
+th, h1, h2, .panel-heading .panel-title a, .tabs-left a, /*#default2 #mainNavi li a, */#default2 .showbiz h4, #psApp #psSearchTile h3, #psApp #psAppHeader #psPageName, #sign-in h3, .highlight h5, h3.azHeading {color:#004b98;}
+
+/* BORDERS ---------------------------------------------------------------------------------------------------------- */
+/*  Most borders are neutral (light taupe or gray). All borders should be assigned here then overrided for color. */
+
+/* GRAY Color 4 - light gray */
+#mypageTabs .side-tabs .tab-pane, #tChat img, #libSporlightBlock, #secNav ul, .searchCriteria, .btn-default, #libMenu, #search, ul.tabs li a, #utilityNav li:hover a, .highlight, fieldset, 
+.panel-group .panel-heading, .libAZ li a, .accordionGroup .tileContent, .tabGroup .tileContent, .tileGroup, .accordianContent, .accordionGroup dt, 
+.accordionGroup dd, .borderSolid, .myProfile #myTopics h3, .myProfile #topicBlock, .editMyProfile #topicBlock, .tabBorder .tab-content, 
+#spotlight, #secNav img, .well, .notifyTitle {border:1px solid #e1e5e8;}
+#mainNavi, .tileLinks li.active, .ADAMDisclaimer, .library .references, .benefitsSecList, .panel-body, #secNav li a, .topBorder{border-top:1px solid #e1e5e8;}
+.list-group-item, .article, .lastUpdate {border-top:1px dotted #e1e5e8;}
+#ribbon .nav-tabs>.active:after {border-top: 12px solid #e1e5e8;}
+.home #homeText, #custom header, #utilityNav ul ul li a, #mainNavi .navbar-nav, .leftBorder{border-left:1px solid #e1e5e8;}
+#custom header, #utilityNav ul ul li a, .inlineMenu li, #mainNavi li a, #programLogo img, .rightBorder{border-right:1px solid #e1e5e8;}
+.bhSites .dropdown-menu a, .nav-tabs, th, .tileLinks li a, .tileLinks li.active, .appHeader, #welcome, .library #libIntro, 
+#provSearchResults tbody tr td, #provSearchResults tbody tr th, .benefitsList > li, .benefitsSecList, 
+.bottomBorder{border-bottom:1px solid #e1e5e8;}
+.list-group-item, .nav-list li a {border-bottom:1px dotted #e1e5e8;border-right:0px;border-left:0px;}
+.nav-list li:last-child a {border-bottom:0px;}
+/*#mypageTabs h3 {border-bottom:2px solid #e1e5e8;}*/
+#app .appPageTitle{border-left:2px solid #e1e5e8}
+#secNav ul li .active, #secNav ul ul {border-left:5px solid #e1e5e8;}
+#secNav ul ul li .active {border-left:0px;}
+#secNav .active, #secNav ul ul li a {border:0px;}
+.side-tabs .nav-list.tabs-left li a {border-bottom:1px solid #e1e5e8; border-left:1px solid #e1e5e8;}
+.contentHeading {border-top:1px dotted #e1e5e8; border-bottom:1px dotted #e1e5e8;}
+#secNav ul ul {border-top:0px; border-right:0px; border-bottom:1px solid #e1e5e8;}
+#mainNavi {border-bottom:2px solid #e1e5e8;}
+#buttonLine .userAccount, #buttonLine .bhSites {border-left:1px dotted #e1e5e8; border-right:1px dotted #e1e5e8;}
+
+/* Color 2 - PRIMARY medium */
+.textHelp, .borderColorPriMed {border-color: #00a8e2;}
+/* Color 3 - PRIMARY light */
+.borderColorPriLight { border-color: #d0ecfb;}
+/* Color 5 - SECONDARY medium */
+.tp-bullets.tp-thumbs .bullet.selected, #psApp #psSearchTile #psDocTypeHeader, .eapSelfRefBtn, #custom.advanced #mainNav.customNavBSC ul, #secNav ul li .active, 
+#mainNav ul ul, #mainNav ul ul li a, #custom #mainNav ul li ul li a, ul.tabs li a:hover, .tabContainer, 
+.borderColorSecMed { border-color: #5c068c;}
+#mainNavi {border-bottom-color:#5c068c;}
+#secNav ul ul { border-left-color: #5c068c;}
+.miniTabs .tileContent, .miniTabs ul.tabs .ui-state-active a, .invisibleContent { border-color: #5c068c !important;}
+#mainNavi li a .caret {border-top-color:#5c068c; border-bottom-color:#5c068c;}
+/* Color 6 - SECONDARY light */
+.searchCriteria, .critButton { border-color: #eee6ea;}
+#default2 #ribbon li.active:after, #custom #ribbon li.active:after {border-top-color:#eee6ea;}
+
+/* GRAY Color 2 - medium gray */ 
+h2, #utilityNav li, #utilityNav ul ul li a, #footerNav li, input, select, textarea, fieldset, .appHeader, .appHeader h1, .btn-default, 
+.borderColorNeutral2Lt { border-color: #c0c4c7;}
+#secNav ul li .active {border-top-color:#c0c4c7;}
+/* GRAY Color 3 - extra light gray */
+#mypageTabs .side-tabs .tab-pane, .well, .panel-group .panel-heading {border-color:#f1f1f1;}
+.tileLinks {border-top:3px solid #f1f1f1;border-bottom:3px solid #f1f1f1;}
+/* transparent */
+#utilityNav li a, .borderTransparent {border:1px solid transparent;}
+
+/* #### IMAGES #### */
+#custom.advanced header .container {background-image:url(ContentDB.Image?id=)}
+
+
